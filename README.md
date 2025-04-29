@@ -2,7 +2,7 @@
 
 This repository contains multiple implementations of the same simple games created using two popular Python game libraries: Pygame and Arcade. The purpose is to provide a practical comparison between these libraries to help developers, educators, and beginners choose the right tool for their projects.
 
-![Pygame Version](screenshots/pygame_screenshot.png) ![Arcade Version](screenshots/arcade_screenshot.png)
+![Pygame Version](screenshots/pygame.png) ![Arcade Version](screenshots/arcade.png)
 *(Note: Screenshots for illustration, actual game appearance will be similar)*
 
 ## 🎮 Games Included
