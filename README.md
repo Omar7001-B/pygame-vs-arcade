@@ -48,6 +48,53 @@ python snake_game.py      # For Snake game
 python collision_demo.py  # For Collision demo
 ```
 
+## 📑 Library Comparison: Pygame vs. Arcade
+
+### Summary of Differences
+
+Both Pygame and Arcade are Python libraries for creating 2D games, but they have distinct characteristics:
+
+**Pygame** is older (released in 2000), built on SDL, and offers a more low-level approach with greater flexibility but requires more boilerplate code. It has wider platform support and a larger community.
+
+**Arcade** is newer (released in 2017), built on OpenGL and Pyglet, and provides higher-level abstractions with built-in features like physics engines and improved sprite handling. It offers better performance for static sprites and has more modern Python features support.
+
+### Comparison Table
+
+| Feature | Pygame | Arcade |
+|---------|--------|--------|
+| **Release Year** | 2000 | 2017 |
+| **Built On** | SDL (C Language) | OpenGL and Pyglet |
+| **Python Support** | Python 2 & 3 | Python 3.6+ only |
+| **Platform Support** | Wide (incl. Android, Raspberry Pi) | Limited (needs OpenGL 3.3+) |
+| **Code Structure** | Tends to mix logic and display code | Encourages separation of logic and display |
+| **Performance: Moving Sprites** | Better | Good |
+| **Performance: Static Sprites** | Good | Better |
+| **Built-in Physics** | No | Yes, including platformer physics |
+| **Sprite Rotation & Scaling** | Manual (CPU-intensive) | Automatic (GPU-accelerated) |
+| **Hitbox System** | Basic rectangular | Advanced with curved hitboxes |
+| **Animated Sprites** | Manual implementation | Built-in support |
+| **Community Size** | Large, mature | Smaller but growing |
+| **Documentation** | Extensive but sometimes dated | Modern, good examples |
+| **Code Complexity** | More verbose, lower-level | Less boilerplate, higher-level |
+| **Graphics Processing** | CPU-based | GPU-based |
+| **Tiled Map Support** | No (requires extensions) | Yes |
+| **Learning Curve** | Steeper initially | Gentler for beginners |
+
+### When to Choose Which Library
+
+**Choose Pygame if you:**
+- Need wide platform compatibility (including Android, Raspberry Pi)
+- Want more control and flexibility at a lower level
+- Prefer a mature, large community with extensive resources
+- Are developing games with many moving sprites
+
+**Choose Arcade if you:**
+- Want to leverage modern Python features
+- Need built-in physics engines and advanced sprite handling
+- Prefer cleaner, less verbose code structure
+- Are a beginner looking for an easier entry point
+- Need better performance for static sprites and GPU acceleration
+
 ## 📊 Comparison: Pygame vs. Arcade
 
 | Feature | Pygame | Arcade |
@@ -124,6 +171,13 @@ The Snake game implementations further highlight differences between the librari
 - **Arcade** provides higher-level abstractions, making it easier to get started quickly and produce cleaner, more organized code for simpler games.
 
 The choice between these libraries depends on your specific needs, experience level, and the type of game you want to create. This project aims to help you make an informed decision by showing the same games implemented in both libraries.
+
+## Sources
+
+1. [Pygame vs Python Arcade: Which is the better game library?](https://coderslegacy.com/pygame-vs-python-arcade/)
+2. [Gaming in Python: PyGame vs Arcade vs PyGame Zero](https://new.pythonforengineers.com/blog/gaming-in-python-pygame-vs-arcade-vs-pygame-zero/)
+3. [Difference between Pygame VS Arcade Library in Python](https://www.geeksforgeeks.org/difference-between-pygame-vs-arcade-library-in-python/)
+4. [Pygame Comparison - Arcade Documentation](https://api.arcade.academy/en/2.6.0/pygame_comparison.html)
 
 ## License
 
