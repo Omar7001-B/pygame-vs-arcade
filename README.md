@@ -1,31 +1,51 @@
 # Pygame vs. Arcade: A Practical Comparison
 
-This repository contains two implementations of the same simple game, "Move the Box," created using two popular Python game libraries: Pygame and Arcade. The purpose is to provide a practical comparison between these libraries to help developers, educators, and beginners choose the right tool for their projects.
+This repository contains multiple implementations of the same simple games created using two popular Python game libraries: Pygame and Arcade. The purpose is to provide a practical comparison between these libraries to help developers, educators, and beginners choose the right tool for their projects.
 
 ![Pygame Version](screenshots/pygame_screenshot.png) ![Arcade Version](screenshots/arcade_screenshot.png)
 *(Note: Screenshots for illustration, actual game appearance will be similar)*
 
-## 🎮 Game Description
+## 🎮 Games Included
 
-Both versions implement the same simple game:
+### 1. Move the Box
+A simple game where:
 - A player (blue square) that can be moved using arrow keys
 - A goal (green square) placed on the screen
 - When the player touches the goal, a "You Win!" message appears and the game stops
 
+### 2. Snake Game
+The classic Snake game where:
+- Control a snake that moves around the screen
+- Eat food to grow longer
+- Avoid hitting the walls or yourself
+- Game ends when you collide with a wall or your own body
+
+### 3. Collision Demo
+A simple demonstration showing:
+- A moving sprite (blue square) that bounces around the screen
+- A stationary block (green square) in the center of the screen
+- Color change feedback when collision occurs
+- FPS counter and collision status display
+- Identical functionality to highlight the architectural differences between the libraries
+
 ## 🚀 Running the Games
 
-### Pygame Version
+### Pygame Versions
 ```bash
 cd pygame_version
 pip install -r requirements.txt
-python move_the_box.py
+python move_the_box.py    # For Move the Box game
+python snake_game.py      # For Snake game
+python collision_demo.py  # For Collision demo
 ```
 
-### Arcade Version
+### Arcade Versions
 ```bash
 cd arcade_version
 pip install -r requirements.txt
-python move_the_box.py
+python move_the_box.py    # For Move the Box game
+python snake_game.py      # For Snake game
+python collision_demo.py  # For Collision demo
 ```
 
 ## 📊 Comparison: Pygame vs. Arcade
@@ -57,6 +77,40 @@ python move_the_box.py
 - Built-in sprite system for game objects
 - Structured separation of drawing, input, and game logic
 
+## Implementation Details - Collision Demo
+
+The Collision Demo highlights core architecture differences:
+
+**Pygame Collision Demo:**
+- Uses a custom main loop with direct control flow
+- Manually handles drawing, updating, and collision detection
+- Uses basic `Rect` objects for collision
+- Directly manages the screen drawing surface
+
+**Arcade Collision Demo:**
+- Uses an object-oriented architecture with Window inheritance
+- Separates concerns into distinct methods (`on_draw`, `on_update`)
+- Uses built-in `SpriteList` and collision detection
+- Classes inherit from built-in Sprite classes
+
+This demo is particularly useful to see how the basic architecture of the libraries differs even for a simple task.
+
+## Implementation Details - Snake Game
+
+The Snake game implementations further highlight differences between the libraries:
+
+**Pygame Snake Game:**
+- Uses a procedural approach with explicit game states
+- Implements a while loop with continuous checking of game state
+- Handles collisions through direct coordinate comparison
+- Manually updates the screen on each frame
+
+**Arcade Snake Game:**
+- Uses a class-based approach with separate player class
+- Relies on Arcade's built-in event handling system
+- Uses scheduled updates instead of an explicit game loop
+- Separates game logic into distinct methods
+
 ## Who This Project Is For
 
 - **Python Beginners** exploring game development options
@@ -69,7 +123,7 @@ python move_the_box.py
 - **Pygame** offers more control and teaches fundamental game development concepts, making it excellent for learning but requiring more code for basic functionality.
 - **Arcade** provides higher-level abstractions, making it easier to get started quickly and produce cleaner, more organized code for simpler games.
 
-The choice between these libraries depends on your specific needs, experience level, and the type of game you want to create. This project aims to help you make an informed decision by showing the same game implemented in both libraries.
+The choice between these libraries depends on your specific needs, experience level, and the type of game you want to create. This project aims to help you make an informed decision by showing the same games implemented in both libraries.
 
 ## License
 
